@@ -1,10 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Hero from '../components/inicio/Hero.astro';
+import SeccionObjetivos from '../components/inicio/SeccionObjetivos.astro';
+import SeccionMision from '../components/inicio/SeccionMision.astro';
+import SeccionVision from '../components/inicio/SeccionVision.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Navbar />
-	</main>
+	<section>
+		<Hero />
+	</section>
+
+	<section>
+		<SeccionObjetivos />
+	</section>
+
+	<section>
+		<SeccionMision />
+	</section>
+
+	<section>
+		<SeccionVision />
+	</section>
 </Layout>
