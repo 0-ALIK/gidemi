@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/inicio/Navbar.astro';
+import Footer from '../components/inicio/Footer.astro';
 
 interface Props {
 	title: string;
@@ -14,17 +15,40 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Grupo de investigación Estudio del Emprendimiento y la Innovación – GIdEMI" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<main>
+		<main class="font-parrafos">
 			<section>
 				<Navbar />
 			</section>
 
-			<slot />
+			<section class="mt-[68px]">
+				<slot />
+			</section>
+
+			<section>
+				<Footer />
+			</section>
 		</main>
 	</body>
 </html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap');
+
+	@font-face {
+		font-family: "Roboto Condensed", sans-serif;
+  		font-optical-sizing: auto;
+  		font-weight: 400;
+  		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "Staatliches", serif;
+  		font-weight: 400;
+  		font-style: normal;
+	}	
+</style>
