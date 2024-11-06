@@ -1,5 +1,37 @@
-<div class="bg-primary px-10 pt-5">
-    <figure>
-        <img src="/svg/docentes.svg" alt="docentes" class="w-full">
-    </figure>
+---
+import MiembroTabla from "./MiembroTabla.astro"
+
+interface Props {
+    tieneFondo?: boolean,
+    invertido?: boolean,
+    titulo: string,
+    img: string,
+    miembros: Array<{
+        nombre: string,
+        cargo: string,
+        img?: string,
+        rol: string
+    }>
+}
+
+const { tieneFondo, invertido, titulo, img, miembros } = Astro.props;
+---
+
+
+<div class={`px-5 sm:px-32 py-5 ${tieneFondo ? 'bg-primary text-white' : ''}`}>
+    <div class={`flex gap-5 ${invertido ? 'flex-row-reverse' : ''}`}>
+
+        <figure class="w-96 hidden sm:block h-96 bg-base-100 rounded-full p-2 flex-shrink-0">
+            <img src={img} alt={titulo} class="w-full h-full object-contain">
+        </figure>
+    
+        <div class="w-full">
+            <h2 class="text-4xl font-bold font-titulos">{titulo}</h2>
+    
+            <div>
+                <MiembroTabla miembros={miembros} />
+            </div>
+        </div>
+
+    </div>
 </div>

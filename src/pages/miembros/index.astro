@@ -1,14 +1,105 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SeccionMiembros from "../../components/miembros/SeccionMiembros.astro";
+
+const miembros = {
+    docentes: [
+        {
+            nombre: "Humberto Álvarez",
+            cargo: "PhD, Facultad de Ingeniería Industrial, UTP",
+            rol: 'Doctor'
+        },
+        {
+            nombre: "Laura Villegas",
+            cargo: "Dra., Facultad de Ingeniería Industrial",
+            rol: "Doctora"
+        },
+        {
+            nombre: "Hania Henríquez",
+            cargo: "Dra. Facultad de Ingeniería Industrial, UTP",
+            rol: "Doctora"
+        }
+    ],
+    investigadores: [
+        {
+            nombre: "Mariela Y. Salgado Canto",
+            cargo: "Dra. en Ciencias Empresariales, Centro de Investigación e Innovación Eléctrica, Mecánica y de la Industria, Facultad de Ingeniería Industrial de la UTP",
+            rol: "Doctora"
+        },
+        {
+            nombre: "Natalia Tejedor",
+            cargo: "Dra. en Estadística Multivariante Aplicada en el Centro de Investigaciones Hidráulicas e Hidrotécnicas de la UTP",
+            rol: "Doctora"
+        }
+    ],
+    administrativos: [
+        {
+            nombre: "Lorena Ramos",
+            cargo: "Master Vinculación con la Sociedad en el Centro de Innovación y Transferencia Tecnológica CITT de la UTP",
+            rol: "Master"
+        }
+    ],
+    externosNacionales: [
+        {
+            nombre: "Gianna Frassatti",
+            cargo: "Dra., Universidad Latina de Panamá y Quality Leadership University",
+            rol: "Doctora"
+        },
+        {
+            nombre: "Armando Espino",
+            cargo: "Dr., CEO en Fundación para el Desarrollo Integrado Sustentable",
+            rol: "Doctor"
+        },
+        {
+            nombre: "Larú Linares",
+            cargo: "Master, Fundación Ciudad del Saber",
+            rol: "Master"
+        },
+        {
+            nombre: "Oscar Bryant",
+            cargo: "Master, Sociólogo, Instituto Nacional de Formación Profesional y Capacitación para el Desarrollo Humano. Coordinación de Emprendimiento y Desarrollo Humano",
+            rol: "Master"
+        },
+        {
+            nombre: "Mitzila Villagra",
+            cargo: "Master en Desarrollo de Habilidades Transversales, Instituto Nacional de Formación Profesional y Capacitación para el Desarrollo Humano",
+            rol: "Master"
+        }
+    ],
+    colaboradoresExtranjeros: [  
+        {
+            nombre: "Ana Luba Yasuki",
+            cargo: "MsC, Universidad Rusa de la Amistad de los Pueblos (RUDN), Moscú, Rusia",
+            rol: "Master"
+        }
+    ]
+};
 ---
 
 <Layout title="GIDEMI - Miembros">
     <section class="my-40">
-        <h1 class="text-4xl font-bold text-center font-titulos">Miembros</h1>
+        <h1 class="text-4xl font-bold text-center font-titulos mb-2">Miembros</h1>
+        <p class="text-center font-bold">Coordinadora</p>
+        <p class="text-center">Mariela Y. Salgado Canto – Investigadora de CINEMI</p>
     </section>
 
     <section>
-        <SeccionMiembros />
+        <SeccionMiembros tieneFondo titulo="Docentes" img="/svg/docentes.svg" miembros={miembros.docentes} />
+    </section>
+
+    <section>
+        <SeccionMiembros invertido titulo="Investigadores" img="/svg/investigadores.svg" miembros={miembros.investigadores} />
+    </section>
+
+    <section>
+        <SeccionMiembros tieneFondo titulo="Administrativos" img="/svg/administrativos.svg" miembros={miembros.administrativos} />
+    </section>
+
+    <section>
+        <SeccionMiembros invertido titulo="Externos nacionales" img="/svg/externos_nacionales.svg" miembros={miembros.externosNacionales} />
+    </section>
+
+    <section>
+        <SeccionMiembros tieneFondo titulo="Colaboradores extranjeros" img="/svg/colaboradores_extranjeros.svg" miembros={miembros.colaboradoresExtranjeros} />
     </section>
 </Layout>
