@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const proyectos = [
+    "Factores determinantes del crecimiento empresarial de los emprendimientos femeninos en Panamá. Programa de Fomento a la Investigación y Desarrollo. Convocatoria Pública de Fomento a I+D para Egresados de Estudios de Doctorado (FIED – Senacyt 2022-2024). Salgado-Canto, M. Investigador y Proponente Principal.",
+    "Proyecto Technology Transfer Innovation Schemes in Latin America – TETRIS. Programa KA2 – Cooperation for innovation and the exchange of good practices – Capacity Building in the field of Higher Education, Erasmus + Unión Europea 2021-2023. Salgado-Canto, M., Investigador Asociado.",
+    "Proyecto Articulación de actores de la Academia-Industria-Estado para la generación de iniciativas de reactivación económica post pandemia COVID-19 y fortalecimiento del ecosistema de innovación en Centroamérica, a través de la Red Free Network. Convocatoria Regional de Proyectos para la Organización de Redes Centroamericanas de Intercambio y Colaboración Científica. Secretaría General del SICA (SG-SICA) y el Consejo Superior Universitario Centroamericano (CSUCA), 2021-2022. Salgado-Canto, M., Investigador Asociado.",
+    "Proyecto HUB de Transferencia y Comercialización de Tecnologías para las Américas. Panamá. Contrato 19-2019. Organización de Estados Americanos – OEA, Secretaría Nacional de Ciencia, Tecnología e Innovación Senacyt. Salgado-Canto, M., Proponente e Investigador Principal 2019.",
+    "Proyecto Smart Summer Camp. Convocatoria de Campamentos Científicos y Tecnológicos. Secretaría Nacional de Ciencias, Tecnología e Innovación – Senacyt, 2017-2018. Salgado-Canto, M., Proponente e Investigador Principal.",
+    "Proyecto: “Global University Entrepreneurial Spirit Student Survey – GUESSS”. Edition 2016, Panamá 2016-2017. Salgado-Canto, M., Investigador Asociado",
+    "Proyecto 573971-EPP-1-2016-1-PA-EPPFA2-CBHE-JP: “Fostering Research Based Entrepreneurship and the Development of Spin-Off Companies in Central America - FREE Network”. Programa Erasmus + Capacity Building in Higher Education, Unión Europea (2016-2019), Salgado-Canto, M., Co-Proponente e Investigador Asociado."
+];
+---
+
+<Layout title="Proyectos">
+    <section class="my-40">
+        <h1 class="text-4xl font-bold text-center font-titulos mb-2">Proyectos</h1>
+    </section>
+
+    <section class="mb-10 px-5 sm:px-32">
+        <ul class="menu bg-base-200 rounded-box w-full">
+            {proyectos.map(proyecto => (
+                <li class="mb-10 text-lg"><a>{proyecto}</a></li>
+            ))}
+        </ul>
+    </section>
+</Layout>
