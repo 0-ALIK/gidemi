@@ -1,9 +1,32 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Alerta from "../../components/Alerta.astro";
 ---
 
 <Layout title="GIDEMI - Contactanos">
-    <h1>Contactanos</h1>
+    <section class="my-40">
+        <h1 class="text-4xl font-bold text-center font-titulos mb-2">Contactanos</h1>
+    </section>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5130.1643992445825!2d-79.40815914966555!3d9.066838378326736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab5517a74609eb%3A0xed4f587d4755f81d!2sUniversidad%20Tecnol%C3%B3gica%20de%20Panam%C3%A1%20Sede%20Tocumen!5e1!3m2!1ses-419!2spa!4v1730960579212!5m2!1ses-419!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="my-5 px-2 sm:px-32">
+        <Alerta msg="Avenida Domingo Díaz (Vía Tocumen), Campus de Investigación de la Universidad Tecnológica de Panamá, Pabellón C">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+        </Alerta>
+    </section>
+
+    <section class="my-5 px-2 sm:px-32">
+        <Alerta msg="(507) 501-3600 ext. 8478/8479">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+        </Alerta>
+    </section>
+
+    <section class="my-5 px-2 sm:px-32">
+        <Alerta msg="mariela.salgado@utp.ac.pa">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+        </Alerta>
+    </section>
+
+    <section class="flex justify-center my-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5130.1643992445825!2d-79.40815914966555!3d9.066838378326736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab5517a74609eb%3A0xed4f587d4755f81d!2sUniversidad%20Tecnol%C3%B3gica%20de%20Panam%C3%A1%20Sede%20Tocumen!5e1!3m2!1ses-419!2spa!4v1730960579212!5m2!1ses-419!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 </Layout>

@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const areasInvestigacion = {
+    'Emprendimiento': [
+        "Comarcal y rural",
+        "Riesgo Social y privados de libertad",
+        "Género",
+        "En la Academia",
+        "Educación Emprendedora",
+        "Ecosistemas de Innovación y Emprendimiento"
+    ],
+    'Innovacion': [
+        "Empresas Start Up y Spin-Off",
+        "Propiedad Intelectual y Activos Intangibles",
+        "Gestión y Transferencia del Conocimiento",
+        "Formación Profesional y Técnica",
+        "Competencias Laborales y Blandas",
+        "Prospectiva",
+        "Educativa"
+    ],
+    'Desarrollo Sostenible': [
+        "Ambiente",
+        "Energía"
+    ],
+};
+---
+
+<Layout title="GIDEMI - Líneas de Investigación">
+    <section class="my-40">
+        <h1 class="text-4xl font-bold text-center font-titulos mb-2">Líneas de Investigación</h1>
+    </section>
+
+    <section class="flex justify-center gap-4 mb-40 flex-wrap">
+        { Object.keys(areasInvestigacion).map((area) => (
+            <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">{area}</h2>
+                    <ul>
+                        { areasInvestigacion[area].map((linea) => (
+                            <li>{linea}</li>
+                        )) }
+                    </ul>
+                </div>
+            </div>
+        )) }
+    </section>
+    
+</Layout>

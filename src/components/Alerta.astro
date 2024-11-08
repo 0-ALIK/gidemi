@@ -1,0 +1,14 @@
+---
+interface Props {
+    msg: string;
+}
+
+const { msg } = Astro.props;
+---
+
+<div role="alert" class="alert">
+    <div>
+        <slot />
+    </div>
+    <span>{msg}</span>
+</div>
