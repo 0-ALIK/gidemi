@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const sitiosInteres = [
+    {
+        nombre: 'UTP',
+        descripcion: 'Universidad Tecnológica de Panamá',
+        imagen: '/utp_logo.png',
+        url: 'https://www.utp.ac.pa/'
+    },
+    {
+        nombre: 'CINEMI',
+        descripcion: 'Centro de Investigación e Innovación Eléctrica, Mecánica y de la Industria',
+        imagen: '/cinemi_logo.png',
+        url: 'https://cinemi.utp.ac.pa/'
+    }
+];
+
+---
+
+<Layout title="Sitios de interés">
+    <section class="my-40">
+        <h1 class="text-4xl font-bold text-center font-titulos mb-2">Sitios de interés</h1>
+    </section>
+    <section class="flex flex-wrap justify-center gap-5 mb-10">
+
+        { sitiosInteres.map((sitio) => (
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <img src={sitio.imagen} alt={sitio.nombre} />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">{sitio.nombre}</h2>
+                    <p>{sitio.descripcion}</p>
+                    <div class="card-actions justify-end">
+                        <a href={sitio.url} target="_blank" class="btn btn-primary">Ir al sitio</a>
+                    </div>
+                </div>
+            </div>
+        )) }
+    </section>
+</Layout>
